@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="form.css">
+        <!-- <link rel="loginpage" href="login.html"> -->
+        
+    </head>
+    <body>
+        <h1>STUDENT REGISTRATION FORM</h1>
+        <div class="form-container">
+        <form id="studentForm" onsubmit="return validateForm(event)">
+            <div>
+            Name:<br>
+            <input type="text" id="name" placeholder="Full Name" name="name"><br><br>
+            </div>
+            <div>
+            Email:<br>
+            <input type="email" placeholder="email" id="email"><br><br>
+            </div>
+            <div>
+            Password:<br>
+            <input type="password" id="password" placeholder="password" name="password"><br><br></div>
+            <div>
+            Phone no.:<br>
+            <input type="text" id="phone" placeholder="Phone number" name="number"><br><br>
+            Age :<br>
+            <input type="number" id="age" name="age" min="18" max="100" placeholder="age" required><br><br>
+            </div>
+            <div>
+            <!-- <label for="photo">Upload Photo:</label><br>
+            <input type="file" id="photo" name="photo" accept="image/*"><br><br> -->
+            <input type="submit">
+            <input type="reset">
+            </div>
+        </form>
+        </div>
+        <script src="stform.js"></script>
+            </body>
+</html
