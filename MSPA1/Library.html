@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="LibraryM.css">
+</head>
+<body>
+    <!-- <h1>Library Management System</h1> -->
+    <div class="form-container">
+        <div class="heading"><h1>Library Book Issue Management</h1></div>
+    <form>
+        <img src="images.jpg" alt="Library Image" class="library-image"><br><br>
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName"><br><br>
+
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId"><br><br>
+
+        <label for="bookId">Branch :</label>
+        <select id="bookid" name="select">
+            <option value="computer Technology Engineering">CT</option>
+            <option value="Computer Science Engineering">CSE</option>
+            <option value="Civil Engineering">CE</option>
+            <option value="Mechanical Engineering">ME</option>
+            <option value="Electronic and Telecomunication Engineering">ETC</option>
+        </select><br><br>
+
+        <label for="bookTitle">Book Title:</label>
+        <input type="text" id="bookTitle" name="bookTitle"><br><br>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author"><br><br>
+
+        <label for="genre">Genre:</label>
+        <select id="genre" name="genre">
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="biography">Biography</option>
+        </select><br><br>
+
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn"><br><br>
+
+        <label for="issueDate">Issue Date:</label>
+        <input type="date" id="issueDate" name="issueDate"><br><br>
+
+        <label for="returnDate">Return Date:</label>
+        <input type="date" id="returnDate" name="returnDate"><br><br>
+
+        <label for="bookImage">Book Image:</label>
+        <input type="file" id="bookImage" name="bookImage"><br><br>
+
+        <input type="submit" value="Issue Book">
+        <input type="reset" value="Clear">
+    </form>
+    </div>
+</body>
+</html>
