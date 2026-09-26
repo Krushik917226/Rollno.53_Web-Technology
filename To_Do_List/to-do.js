@@ -1,31 +1,32 @@
-const input = document.getElementById('taskInput');
-const addBtn = document.getElementById('addBtn');
-const taskList = document.getElementById('taskList');
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const taskInput = document.querySelector('#task');
+    const tasksList = document.querySelector('.tasks');
 
-addBtn.addEventListener('click', () => {
-  if (!input.value.trim()) return;
+    form.onsubmit = () => {
+        const task = taskInput.value.trim();
 
-  // 1. Create list item
-  const li = document.createElement('li');
+        if (task.length > 0) {
+            const li = document.createElement('li');
+            const checkbox =document.createElement('input');
+            checkbox.type='checkbox';
 
-  // 2. Create task text span
-  const textSpan = document.createElement('span');
-  textSpan.textContent = input.value;
-  textSpan.addEventListener('click', () => {
-    textSpan.classList.toggle('completed');
-  });
+            const span =document.createElement('span');
+            span.textContent=task;
+            checkbox.onchange = () => {
+              if(checkbox.checked){
+              span.style.textDecoration='line-through';
+              span.style.opacity='0.6';
+            }else{
+              span.style.textDecoration='none';
+              span.style.opacity='1';
+            }
+            };
+            li.append(checkbox,span);
+            tasksList.append(li);
+            taskInput.value = '';
+        }
 
-  // 3. Create delete button
-  const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = '❌';
-  deleteBtn.addEventListener('click', () => {
-    taskList.removeChild(li);
-  });
-
-  // 4. Assemble DOM elements
-  li.appendChild(textSpan);
-  li.appendChild(deleteBtn);
-  taskList.appendChild(li);
-
-  input.value = ''; // Clear input
+        return false;
+    };
 });
